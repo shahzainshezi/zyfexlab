@@ -5,9 +5,9 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen pt-24 md:pt-32 pb-12 md:pb-20 flex items-center overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 w-full h-full bg-dot-pattern opacity-30 z-0"></div>
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#7c6cf0]/20 rounded-full blur-[120px] mix-blend-screen pointer-events-none"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#22d3ee]/10 rounded-full blur-[100px] mix-blend-screen pointer-events-none"></div>
+      <div className="absolute inset-0 w-full h-full bg-dot-pattern opacity-30 z-0" aria-hidden="true"></div>
+      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#7c6cf0]/20 rounded-full blur-[120px] mix-blend-screen pointer-events-none" aria-hidden="true"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#22d3ee]/10 rounded-full blur-[100px] mix-blend-screen pointer-events-none" aria-hidden="true"></div>
 
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
@@ -39,7 +39,11 @@ export default function Hero() {
               >
                 Book Your Free Audit →
               </Button>
-              <Button variant="outline" className="border-white/10 hover:bg-white/5 text-white font-medium rounded-full px-8 py-6 text-lg backdrop-blur-sm">
+              <Button 
+                variant="outline" 
+                className="border-white/10 hover:bg-white/5 text-white font-medium rounded-full px-8 py-6 text-lg backdrop-blur-sm"
+                aria-label="See how it works video"
+              >
                 ▶ See How It Works
               </Button>
             </div>
@@ -76,20 +80,20 @@ export default function Hero() {
               </div>
 
               {/* Terminal Content */}
-              <div className="space-y-2">
+              <dl className="space-y-2">
                 <div className="text-[#9191a8]">
                   <span className="text-[#7c6cf0]">{'>'}</span> zyfex.init()
                 </div>
                 <div className="pl-4 space-y-1">
-                  <div><span className="text-[#5a5a72]">status:</span> <span className="text-[#34d399]">"active"</span></div>
-                  <div><span className="text-[#5a5a72]">leads_today:</span> <span className="text-[#22d3ee]">24</span></div>
-                  <div><span className="text-[#5a5a72]">emails_sent:</span> <span className="text-[#9d8fff]">156</span></div>
-                  <div><span className="text-[#5a5a72]">appointments:</span> <span className="text-[#fbbf24]">8</span></div>
-                  <div><span className="text-[#5a5a72]">revenue_delta:</span> <span className="text-[#34d399]">"+$4,200"</span></div>
-                  <div><span className="text-[#5a5a72]">uptime:</span> <span className="text-[#eeeef2]">"99.9%"</span></div>
+                  <div className="flex gap-2"><dt className="text-[#5a5a72]">status:</dt> <dd className="text-[#34d399]">"active"</dd></div>
+                  <div className="flex gap-2"><dt className="text-[#5a5a72]">leads_today:</dt> <dd className="text-[#22d3ee]">24</dd></div>
+                  <div className="flex gap-2"><dt className="text-[#5a5a72]">emails_sent:</dt> <dd className="text-[#9d8fff]">156</dd></div>
+                  <div className="flex gap-2"><dt className="text-[#5a5a72]">appointments:</dt> <dd className="text-[#fbbf24]">8</dd></div>
+                  <div className="flex gap-2"><dt className="text-[#5a5a72]">revenue_delta:</dt> <dd className="text-[#34d399]">"+$4,200"</dd></div>
+                  <div className="flex gap-2"><dt className="text-[#5a5a72]">uptime:</dt> <dd className="text-[#eeeef2]">"99.9%"</dd></div>
                 </div>
-                <div className="animate-pulse text-[#7c6cf0] pt-2">_</div>
-              </div>
+                <div className="animate-pulse text-[#7c6cf0] pt-2" aria-hidden="true">_</div>
+              </dl>
             </div>
 
             {/* Floating Badges */}

@@ -90,6 +90,8 @@ export default function Nav() {
           <button
             className="md:hidden text-white cursor-pointer"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -99,11 +101,12 @@ export default function Nav() {
       {/* Mobile Nav */}
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <motion.div
+          <motion.nav
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             className="absolute top-full left-0 right-0 bg-[#05050a] border-b border-white/10 shadow-2xl p-8 flex flex-col gap-6 md:hidden z-[60]"
+            aria-label="Mobile navigation"
           >
             {navLinks.map((link) => (
               <button
@@ -120,7 +123,7 @@ export default function Nav() {
             >
               Book Free Audit →
             </Button>
-          </motion.div>
+          </motion.nav>
         )}
       </AnimatePresence>
     </header>

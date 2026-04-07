@@ -34,6 +34,7 @@ export default function Footer() {
                       }
                     }}
                     className="text-[#9191a8] hover:text-white transition-colors text-sm cursor-pointer"
+                    aria-label={`Learn more about ${link}`}
                   >
                     {link}
                   </button>
@@ -59,6 +60,7 @@ export default function Footer() {
                       }
                     }}
                     className="text-[#9191a8] hover:text-white transition-colors text-sm cursor-pointer"
+                    aria-label={`Jump to ${link} section`}
                   >
                     {link}
                   </button>
@@ -77,6 +79,7 @@ export default function Footer() {
                 <button
                   onClick={() => document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' })}
                   className="text-[#7c6cf0] font-medium hover:text-[#9d8fff] transition-colors text-sm"
+                  aria-label="Book a consultation call"
                 >
                   Book a Call
                 </button>
